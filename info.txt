@@ -1,0 +1,14 @@
+查看每个物理CPU中core的个数(即核数)
+cat /proc/cpuinfo| grep "cpu cores"| uniq
+
+查看线程数
+grep 'processor' /proc/cpuinfo | sort -u | wc -l    
+
+L3 Cache 的大小
+cat /sys/devices/system/cpu/cpu0/cache/index3/size
+
+查看实体机最大支持的内存容量
+sudo dmidecode|grep -P 'Maximum\s+Capacity'
+
+查看cpu型号
+cat /proc/cpuinfo
